@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Prueba de Colores</title>
+    <!-- Tailwind CSS for modern responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        exactBg: '#3b8ce3',
+                        customAccent: '#E78936',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #3b8ce3 !important;
+        }
+    </style>
+</head>
+<body class="bg-[#3b8ce3] text-white min-h-screen flex flex-col justify-between selection:bg-[#E78936] selection:text-white">
+
+    <header class="w-full py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-[#E78936] flex items-center justify-center font-extrabold text-xl text-white shadow-lg">
+                P
+            </div>
+            <span class="text-2xl font-extrabold tracking-tight text-white">PaletteLab</span>
+        </div>
+        <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+            <a href="#hero" class="text-white hover:text-[#E78936] transition-colors">Inicio</a>
+            <a href="#cards" class="text-white hover:text-[#E78936] transition-colors">Tarjetas</a>
+            <a href="#interactive" class="text-white hover:text-[#E78936] transition-colors">Interactivo</a>
+            <a href="#typography" class="text-white hover:text-[#E78936] transition-colors">Tipografía</a>
+        </nav>
+        <button onclick="showToast('¡Gracias por explorar!')" class="bg-[#E78936] text-white px-5 py-2.5 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+            Acción Rápida
+        </button>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-12 w-full space-y-20 bg-[#3b8ce3]">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center space-y-6 py-10">
+            <span class="inline-block bg-white/10 text-[#E78936] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/20">
+                Demostración de Interfaz
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-3xl mx-auto leading-tight text-white">
+                Fondo configurado exactamente en <span class="text-[#E78936]">#3b8ce3</span> con textos blancos y acentos.
+            </h1>
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light">
+                Una página web moderna construida específicamente para apreciar cómo interactúan el fondo azul brillante, el blanco limpio y el naranja vibrante.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#interactive" class="bg-[#E78936] text-white font-bold px-8 py-3.5 rounded-xl shadow-lg hover:opacity-90 transition-all">
+                    Probar Interactividad
+                </a>
+                <a href="#cards" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-bold px-8 py-3.5 rounded-xl transition-all">
+                    Ver Componentes
+                </a>
+            </div>
+        </section>
+
+        <section id="cards" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-bold text-white">Tarjetas de Demostración</h2>
+                <p class="text-white/80">Componentes modulares con efectos visuales y adaptabilidad total.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-xl space-y-4 hover:border-[#E78936] transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-[#E78936] flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-110 transition-transform">
+                        01
+                    </div>
+                    <h3 class="text-xl font-bold text-[#E78936]">Fondo Vibrante</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        El color base <code class="bg-black/20 px-2 py-0.5 rounded text-white font-mono">#3b8ce3</code> aporta un aspecto enérgico, fresco y altamente profesional.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-xl space-y-4 hover:border-[#E78936] transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-white text-[#3b8ce3] flex items-center justify-center font-bold text-lg shadow-md group-hover:scale-110 transition-transform">
+                        02
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Contraste Blanco</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        El texto principal en blanco puro (<code class="bg-black/20 px-2 py-0.5 rounded text-white font-mono">#ffffff</code>) garantiza la máxima legibilidad y claridad visual.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-xl space-y-4 hover:border-[#E78936] transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-[#E78936] flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-110 transition-transform">
+                        03
+                    </div>
+                    <h3 class="text-xl font-bold text-[#E78936]">Acento Naranja</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        El código <code class="bg-black/20 px-2 py-0.5 rounded text-white font-mono">#E78936</code> sobresale de forma elegante para llamar la atención en llamadas a la acción.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interactive" class="bg-white/5 border border-white/15 rounded-3xl p-8 md:p-12 space-y-8 shadow-2xl backdrop-blur-sm">
+            <div class="max-w-xl space-y-2">
+                <h2 class="text-3xl font-bold text-white">Sección Interactiva</h2>
+                <p class="text-white/80">Prueba los botones y controles dinámicos integrados en esta interfaz de prueba.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-[#E78936] uppercase tracking-wider">Contador Dinámico</label>
+                        <div class="flex items-center space-x-4">
+                            <span id="counterValue" class="text-5xl font-extrabold text-white">0</span>
+                            <div class="flex space-x-2">
+                                <button onclick="decrement()" class="bg-white/20 hover:bg-white/30 text-white font-bold px-4 py-2.5 rounded-xl transition-all">-</button>
+                                <button onclick="increment()" class="bg-[#E78936] hover:opacity-90 text-white font-bold px-4 py-2.5 rounded-xl transition-all">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-[#E78936] uppercase tracking-wider">Cambiar Mensaje de Estado</label>
+                        <div class="flex gap-2">
+                            <input id="userInput" type="text" placeholder="Escribe algo aquí..." class="bg-white/10 border border-white/30 rounded-xl px-4 py-2.5 text-white placeholder-white/60 focus:outline-none focus:border-[#E78936] flex-grow">
+                            <button onclick="updateMessage()" class="bg-white text-[#3b8ce3] font-bold px-5 py-2.5 rounded-xl hover:bg-white/90 transition-all">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black/20 border border-white/10 rounded-2xl p-6 space-y-4">
+                    <span class="text-xs font-bold uppercase text-[#E78936] tracking-wider">Panel de Resultados</span>
+                    <div id="displayBox" class="p-4 rounded-xl bg-black/30 border border-white/10 text-white font-medium min-h-[80px] flex items-center justify-center text-center">
+                        Escribe un mensaje o usa el contador para ver los resultados aquí.
+                    </div>
+                    <button onclick="resetDemo()" class="w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-semibold py-2.5 rounded-xl transition-all">
+                        Restablecer Valores
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography" class="space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-bold text-white">Muestra de Tipografía</h2>
+                <p class="text-white/80">Jerarquía visual y contraste de textos sobre el fondo #3b8ce3.</p>
+            </div>
+            <div class="bg-white/10 border border-white/20 rounded-2xl p-8 space-y-6">
+                <div>
+                    <span class="text-xs font-mono text-[#E78936] uppercase">Heading 1 / Font ExtraBold</span>
+                    <h3 class="text-4xl font-extrabold text-white mt-1">El diseño inteligente inspira confianza.</h3>
+                </div>
+                <hr class="border-white/10">
+                <div>
+                    <span class="text-xs font-mono text-[#E78936] uppercase">Heading 2 / Font Bold con Acento</span>
+                    <h4 class="text-2xl font-bold text-[#E78936] mt-1">Combinaciones cromáticas optimizadas para web moderna.</h4>
+                </div>
+                <hr class="border-white/10">
+                <div>
+                    <span class="text-xs font-mono text-[#E78936] uppercase">Parámetro de Texto / Font Light</span>
+                    <p class="text-white/90 font-light text-base mt-1 leading-relaxed">
+                        Este párrafo demuestra cómo la tipografía en blanco claro equilibra perfectamente la fuerza visual del fondo azul y resalta los acentos en naranja brillante (#E78936).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full bg-black/20 border-t border-white/10 py-8 px-6 mt-20 text-center text-sm text-white/80">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© 2026 PaletteLab. Todos los derechos reservados.</p>
+            <div class="flex space-x-6 text-white/90">
+                <span class="hover:text-[#E78936] cursor-pointer">Privacidad</span>
+                <span class="hover:text-[#E78936] cursor-pointer">Términos</span>
+                <span class="hover:text-[#E78936] cursor-pointer">Soporte</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-[#E78936] text-white px-6 py-3 rounded-xl shadow-2xl opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4 font-semibold z-50">
+        ¡Acción realizada con éxito!
+    </div>
+
+    <script>
+        let count = 0;
+
+        function increment() {
+            count++;
+            document.getElementById('counterValue').innerText = count;
+            showToast('Contador incrementado a ' + count);
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById('counterValue').innerText = count;
+            showToast('Contador disminuido a ' + count);
+        }
+
+        function updateMessage() {
+            const input = document.getElementById('userInput');
+            const display = document.getElementById('displayBox');
+            if (input.value.trim() !== '') {
+                display.innerText = "Mensaje ingresado: \"" + input.value + "\"";
+                display.classList.add('text-[#E78936]', 'font-bold');
+                showToast('Mensaje actualizado');
+                input.value = '';
+            } else {
+                showToast('Por favor escribe un mensaje válido');
+            }
+        }
+
+        function resetDemo() {
+            count = 0;
+            document.getElementById('counterValue').innerText = count;
